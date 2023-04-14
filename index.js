@@ -1,4 +1,4 @@
-localStorage.clickcount;
+localStorage.clickcount = 0;
 var button = document.getElementById('track');
 button.addEventListener('click', addClicks);
 
