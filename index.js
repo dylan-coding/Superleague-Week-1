@@ -1,16 +1,16 @@
-var n = 0;
+localStorage.clickcount;
 var button = document.getElementById('track');
-button.addEventListener('click', trakeo);
+button.addEventListener('click', addClicks);
 
 var clicks = document.getElementById('click_tracker');
-clicks.innerHTML = n;
+clicks.innerHTML = localStorage.clickcount;
 
-function trakeo() {
-    n++
-    clicks.innerHTML = n;
+function addClicks() {
+    localStorage.clickcount = Number(localStorage.clickcount) + 1;
+    clicks.innterHTML = localStorage.clickcount;
 }
 
-var coord = document.getElementById("coord_table");
+/*var coord = document.getElementById("coord_table");
 function getLocation() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(addPosition);
@@ -25,4 +25,4 @@ function addPosition(position) {
 
     var lat = row.insertCell(0);
     lat.innerHTML = "Latitude: " + position.coords.latitude;
-}
+}*/
